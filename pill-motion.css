@@ -1,0 +1,27 @@
+/* Reference pill: color expands from the circular arrow; label and chevrons roll. */
+.pill-positioned{position:relative}
+.pill-link.pill-motion-ready{--pill-ink:#121212;--pill-paper:#fff;isolation:isolate;overflow:hidden;background:transparent;color:var(--pill-ink);-webkit-backface-visibility:hidden;backface-visibility:hidden}
+.pill-link.pill-light.pill-motion-ready{--pill-ink:#fff;--pill-paper:#121212}
+.all-work .pill-link.pill-motion-ready,.services .pill-link.pill-motion-ready{--pill-ink:var(--scene-ink,#fff);--pill-paper:var(--scene-background,#121212)}
+.studio-cta.pill-link.pill-motion-ready{--pill-ink:#121212;--pill-paper:#fff}
+.pill-link.pill-motion-ready:is(:hover,:focus-visible,.is-pill-hovered){background:transparent;color:var(--pill-ink)}
+.pill-link.pill-motion-ready>.pill-label{position:relative;z-index:2}
+.pill-link.pill-motion-ready .roll-label{line-height:1.15}
+.pill-link.pill-motion-ready .roll-label>span{transition:transform .6s cubic-bezier(.165,.84,.44,1)}
+.pill-link.pill-motion-ready .roll-label>span:first-child{color:var(--pill-ink)}
+.pill-link.pill-motion-ready .roll-label>span+span{color:var(--pill-paper);transform:translateY(110%)}
+.pill-link.pill-motion-ready:is(:hover,:focus-visible,.is-pill-hovered) .roll-label>span:first-child{transform:translateY(-110%)}
+.pill-link.pill-motion-ready:is(:hover,:focus-visible,.is-pill-hovered) .roll-label>span+span{transform:translateY(0)}
+.pill-link.pill-motion-ready .pill-hover-fill{position:absolute;z-index:0;border-radius:50%;background:var(--pill-ink);pointer-events:none;transform:scale(0);transform-origin:center;will-change:transform}
+.pill-link.pill-motion-ready .pill-arrow,.pill-link.pill-motion-ready:is(:hover,:focus-visible,.is-pill-hovered) .pill-arrow{position:relative;z-index:2;flex-shrink:0;background:var(--pill-ink);color:var(--pill-paper);transform:none;transition:background-color .6s cubic-bezier(.165,.84,.44,1),color .6s cubic-bezier(.165,.84,.44,1)}
+.pill-link.pill-motion-ready .pill-arrow:after{content:none}
+.pill-link.pill-motion-ready .pill-chevron-svg{display:block;width:100%;height:100%;overflow:visible;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round}
+.pill-link.pill-motion-css .pill-hover-fill{transition:transform .6s cubic-bezier(.165,.84,.44,1)}
+.pill-link.pill-motion-css.is-pill-hovered .pill-hover-fill{transform:scale(15);transition-duration:1.2s}
+.pill-link.pill-motion-css .pill-chevron-svg path{transform-box:fill-box;transition:transform .5s ease-out}
+.pill-link.pill-motion-css .pill-chevron-svg path+path{transform:translateX(-200%)}
+.pill-link.pill-motion-css.is-pill-hovered .pill-chevron-svg path:first-child{transform:translateX(200%)}
+.pill-link.pill-motion-css.is-pill-hovered .pill-chevron-svg path+path{transform:translateX(0)}
+@media(prefers-reduced-motion:reduce){
+  .pill-link.pill-motion-ready .roll-label>span,.pill-link.pill-motion-ready .pill-hover-fill,.pill-link.pill-motion-ready .pill-chevron-svg path,.pill-link.pill-motion-ready .pill-arrow{transition:none}
+}

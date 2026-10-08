@@ -1,0 +1,28 @@
+/* Preserve the reference grid, type scale, spacing and motion.
+   Only Korean glyph clearance and the requested header brand are adapted. */
+html[lang="ko"]{font-family:"Neue Montreal","Malgun Gothic","Apple SD Gothic Neo",sans-serif}
+html[lang="ko"] h1,html[lang="ko"] h2,html[lang="ko"] h3,html[lang="ko"] p,html[lang="ko"] .studio-toggle{word-break:keep-all;overflow-wrap:break-word}
+html[lang="ko"] .word-mask{padding-bottom:.2em;margin-bottom:-.2em}
+html[lang="ko"] .footer-statement>.word-mask{display:inline-block;color:inherit}
+html[lang="ko"] .service-copy p,html[lang="ko"] .studio-description p,html[lang="ko"] .services-intro p,html[lang="ko"] .studio-intro{line-height:1.35}
+html[lang="ko"] .footer-copyright{letter-spacing:0;white-space:normal;text-wrap:balance;line-height:1.35}
+.hero-message{max-width:110rem;color:white;mix-blend-mode:difference}
+.hero-message h1{mix-blend-mode:normal}
+
+.header-brand{display:block;font-family:"Neue Montreal",Arial,sans-serif;font-size:2.6rem;font-weight:500;letter-spacing:-.06em;line-height:1;white-space:nowrap}
+@media(max-width:1199px){.header-brand{font-size:2rem}}
+@media(max-width:767px){.header-brand{font-size:1.8rem}}
+@media(max-width:1199px){.hero-top{will-change:auto}}
+
+/* Keep the six original visual blocks: hero, earnings, benefits, capabilities, accordion, contact. */
+.revenue-anchor{position:absolute;top:100svh;left:0;width:1px;height:1px;pointer-events:none}
+.work-statement h2{width:min(112rem,calc(100% - 8rem))}
+.featured-name{word-break:keep-all;text-wrap:balance}
+.benefit-list{display:grid;gap:2.4rem;margin-bottom:4rem}
+.benefit h3{font-size:2.4rem;line-height:1.16;margin-bottom:.8rem;white-space:nowrap}
+.services-intro .benefit p{font-size:1.8rem;line-height:1.35;padding-bottom:0}
+.capabilities-lead{margin-top:16rem;scroll-margin-top:8rem}
+.capabilities-lead p{font-size:2.4rem;line-height:1.35;max-width:70rem}
+.capabilities-lead+.service-grid{padding-top:6.4rem}
+@media(max-width:1199px){.benefit h3{font-size:1.8rem}.services-intro .benefit p{font-size:1.4rem}.benefit-list{gap:2rem;margin-bottom:3.2rem}.capabilities-lead{margin-top:8rem}.capabilities-lead p{font-size:1.8rem}}
+@media(max-width:767px){.mobile-work-heading{font-size:clamp(3rem,8.2vw,3.6rem)}.benefit-list{gap:2.4rem;margin-bottom:0}.capabilities-lead{margin-top:6.4rem}.capabilities-lead p{font-size:1.6rem}.capabilities-lead+.service-grid{padding-top:4rem}}
